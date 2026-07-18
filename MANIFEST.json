@@ -1,0 +1,60 @@
+{
+  "name": "selective-regeneration-pipeline",
+  "version": "2.2.0",
+  "description": "LLM-guided selective code regeneration using dependency-aware impact analysis",
+  "package": "selective_regeneration",
+  "notebook": "notebooks/qwen-selective-regeneration-v2.ipynb",
+  "files": {
+    "package": [
+      "selective_regeneration/__init__.py",
+      "selective_regeneration/change_model.py",
+      "selective_regeneration/llm_runner.py",
+      "selective_regeneration/experiment_runner.py",
+      "selective_regeneration/context_builder.py",
+      "selective_regeneration/output_parser.py",
+      "selective_regeneration/patching.py",
+      "selective_regeneration/snapshots.py",
+      "selective_regeneration/validation.py",
+      "selective_regeneration/deterministic_repair.py",
+      "selective_regeneration/metrics.py",
+      "selective_regeneration/dsl.py",
+      "selective_regeneration/diff.py",
+      "selective_regeneration/dependency.py",
+      "selective_regeneration/ch_003_definition.py"
+    ],
+    "notebooks": [
+      "notebooks/qwen-selective-regeneration-v2.ipynb"
+    ],
+    "tests": [
+      "tests/__init__.py",
+      "tests/test_model_discovery.py"
+    ],
+    "config": [
+      "config/experiment_config.json"
+    ],
+    "docs": [
+      "README.md",
+      "README-KAGGLE.md",
+      "SYSTEM_STATE.md",
+      "ARCHITECTURE.md",
+      "CODEBASE_MAP.md",
+      "CHANGELOG.md",
+      "TODO.md",
+      "PROJECT_SUMMARY.md",
+      "RELEASE_CHECKLIST.md",
+      "FINAL_BASELINE.md",
+      "CONTRIBUTING.md",
+      "VERSIONING.md",
+      "RELEASE_NOTES_v2.2.0.md"
+    ],
+    "archive": [
+      "notebooks/archive/v1.0-research-baseline.ipynb"
+    ]
+  },
+  "requirements": "requirements-kaggle.txt",
+  "model": {
+    "primary": "qwen-lm/qwen2.5-coder/7b-instruct-gptq-int4",
+    "fallback": "qwen-lm/qwen2.5-coder/7b-instruct",
+    "search_root": "/kaggle/input"
+  }
+}
